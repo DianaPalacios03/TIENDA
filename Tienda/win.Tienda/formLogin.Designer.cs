@@ -1,4 +1,6 @@
-﻿namespace win.Tienda
+﻿using System;
+
+namespace win.Tienda
 {
     partial class formLogin
     {
@@ -126,6 +128,11 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
         }
 
         #endregion

@@ -90,9 +90,26 @@ namespace BLTienda
                 resultado.Mensaje = " El precio debe ser mayor que cero ";
                 resultado.Exitoso = false;
             }
+            if (producto.TipoId == 0)
+            {
+                resultado.Mensaje = "Seleccione un Tipo ";
+                resultado.Exitoso = false;
 
 
-            return resultado;
+
+            
+
+        }
+            if (producto.CategoriaId == 0)
+                {
+                    resultado.Mensaje = "Seleccione una talla ";
+                    resultado.Exitoso = false;
+
+
+
+                }
+
+                return resultado;
 
         }
     }
@@ -101,16 +118,35 @@ namespace BLTienda
 
 
 
-
+    
 
     public class Producto
     {
         public int Id { get; set; }
         public string Descripcion { get; set; }
-        public double Precio{ get; set; }
+        public double Precio { get; set; }
+        public byte[] Foto{ get; set; }
+
         public int Existencia { get; set; }
+        public int CategoriaId { get; set; }
+        public Categoria Categorias { get; set; }
+        public int TipoId { get; set; }
+        public Tipo Tipo { get; set; }
+
+
+
+
+
+
         public bool Activo { get; set; }
+       
+        public Producto()
+        {
+            Activo = true;
+
+        }
     }
+
     public class Resultado
     {
         public bool Exitoso { get; set; }

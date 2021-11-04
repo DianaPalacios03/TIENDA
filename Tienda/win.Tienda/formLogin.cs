@@ -39,23 +39,37 @@ namespace win.Tienda
             usuario = textBox1.Text;
             contraseña = textBox2.Text;
 
+            button1.Enabled = false;
+            button1.Text = "Verificando..";
+            Application.DoEvents();
+
             var resultado = _seguridad.Autorizar(usuario, contraseña);
 
             if (resultado == true)
-
-                
             {
                 this.Close();
             }
             else
             {
-                MessageBox.Show("Usuario o conraseña incorrecta");
+                MessageBox.Show("Usuario o Contraseña incorrecta");
             }
-}
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

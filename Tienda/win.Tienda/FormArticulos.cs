@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,13 +15,30 @@ namespace win.Tienda
     public partial class FormArticulos : Form
     {
         ProductosBL _productos;
+        CategoriasBL _categorias;
+        TiposBL _tiposBL;
+
+
+
         public FormArticulos()
         {
             InitializeComponent();
 
-            
+
             _productos = new ProductosBL();
             listaProductosBindingSource.DataSource = _productos.ObtenerProductos();
+
+            _categorias = new CategoriasBL();
+            listaCategoriasBindingSource.DataSource = _categorias.ObtenerCategorias();
+
+            _tiposBL = new TiposBL();
+            listaTiposBindingSource.DataSource = _tiposBL.ObtenerTipos();
+
+            
+
+
+
+
         }
 
         private void FormArticulos_Load(object sender, EventArgs e)
@@ -32,6 +50,26 @@ namespace win.Tienda
         {
             listaProductosBindingSource.EndEdit();
             var producto = (Producto)listaProductosBindingSource.Current;
+
+            if (fotoPictureBox.Image != null)
+            {
+                producto.Foto = Program.imageToByteArray(fotoPictureBox.Image);
+            }
+            else
+            {
+                producto.Foto = null;
+            }
+
+
+
+
+
+
+
+
+
+
+
 
             var resultado = _productos.GuardarProducto(producto);
 
@@ -107,6 +145,77 @@ namespace win.Tienda
             DeshabilitarHabilitarBotones(true);
             Eliminar(0);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var producto = (Producto)listaProductosBindingSource.Current;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tipoIdComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fotoPictureBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            var producto = (Producto)listaProductosBindingSource.Current;
+
+            if (producto != null)
+            {
+                openFileDialog1.ShowDialog();
+                var archivo = openFileDialog1.FileName;
+
+                if (archivo != "")
+                {
+                    var fileInfo = new FileInfo(archivo);
+                    var FileStream = fileInfo.OpenRead();
+
+                    fotoPictureBox.Image = Image.FromStream(FileStream);
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Cree un producto antes de asignar una imagen ");
+            }
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            fotoPictureBox.Image = null;
+        }
+
+        private void categoriaIdLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void categoriaIdComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void categoriaIdComboBox_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
-}
+    }
+
 

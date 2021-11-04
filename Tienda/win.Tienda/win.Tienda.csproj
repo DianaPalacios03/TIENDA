@@ -112,10 +112,19 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\BLTienda.Categoria.datasource" />
+    <None Include="Properties\DataSources\BLTienda.CategoriasBL.datasource" />
+    <None Include="Properties\DataSources\BLTienda.Contexto.datasource" />
+    <None Include="Properties\DataSources\BLTienda.DatosdeInicio.datasource" />
+    <None Include="Properties\DataSources\BLTienda.Dbcontext.datasource" />
     <None Include="Properties\DataSources\BLTienda.Producto.datasource" />
     <None Include="Properties\DataSources\BLTienda.ProductosBL+Producto.datasource" />
     <None Include="Properties\DataSources\BLTienda.ProductosBL.datasource" />
+    <None Include="Properties\DataSources\BLTienda.Resultado.datasource" />
     <None Include="Properties\DataSources\BLTienda.SeguridadBL.datasource" />
+    <None Include="Properties\DataSources\BLTienda.Tipo.datasource" />
+    <None Include="Properties\DataSources\BLTienda.TiposBL.datasource" />
+    <None Include="Properties\DataSources\BLTienda.Usuario.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
