@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace win.Tienda.Properties
+namespace Win.Tienda.Properties
 {
 
 

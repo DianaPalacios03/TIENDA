@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace win.Tienda
+namespace Win.Tienda
 {
-    public partial class FormMenu : System.Windows.Forms.Form
+    public partial class FormMenu : Form
     {
         public FormMenu()
         {
@@ -20,18 +20,23 @@ namespace win.Tienda
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Login();
-
         }
 
         private void Login()
         {
-            var Formlogin = new formLogin();
-            Formlogin.ShowDialog();
+            var formLogin = new FormLogin();
+            formLogin.ShowDialog();//Showdialog es para que el formulario login se quede estatico
+        }
+
+       
+        private void FormMenu_Load(object sender, EventArgs e)
+        {
+            Login();
         }
 
         private void articulosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var formArticulos = new FormArticulos();
+            var formArticulos = new FormProductos();
             formArticulos.MdiParent = this;
             formArticulos.Show();
         }
@@ -41,12 +46,13 @@ namespace win.Tienda
             var formClientes = new FormClientes();
             formClientes.MdiParent = this;
             formClientes.Show();
-
         }
 
-        private void FormMenu_Load(object sender, EventArgs e)
+        private void facturaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Login();
+            var formFactura = new FormFactura();
+            formFactura.MdiParent = this;
+            formFactura.Show();
         }
     }
 }

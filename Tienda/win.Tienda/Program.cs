@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace win.Tienda
+namespace Win.Tienda
 {
     static class Program
     {
@@ -23,11 +23,10 @@ namespace win.Tienda
 
         public static byte[] imageToByteArray(Image imageIn)
         {
-            var  ms =  new MemoryStream();
+           var ms = new MemoryStream();
             imageIn.Save(ms, imageIn.RawFormat);
 
             return ms.ToArray();
         }
     }
 }
-

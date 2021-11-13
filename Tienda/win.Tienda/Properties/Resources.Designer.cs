@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace win.Tienda.Properties {
+namespace Win.Tienda.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace win.Tienda.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("win.Tienda.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Win.Tienda.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -63,9 +63,9 @@ namespace win.Tienda.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Logotipo_Superminimalista_con_flor_y_Texto_Curvo_en_fondo_beis {
+        internal static System.Drawing.Bitmap WhatsApp_Image_2021_11_04_at_10_38_44_PM {
             get {
-                object obj = ResourceManager.GetObject("Logotipo Superminimalista con flor y Texto Curvo en fondo beis", resourceCulture);
+                object obj = ResourceManager.GetObject("WhatsApp Image 2021-11-04 at 10.38.44 PM", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace win.Tienda.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Logotipo_Superminimalista_con_flor_y_Texto_Curvo_en_fondo_beis1 {
+        internal static System.Drawing.Bitmap WhatsApp_Image_2021_11_04_at_10_381 {
             get {
-                object obj = ResourceManager.GetObject("Logotipo Superminimalista con flor y Texto Curvo en fondo beis1", resourceCulture);
+                object obj = ResourceManager.GetObject("WhatsApp Image 2021-11-04 at 10.381", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
