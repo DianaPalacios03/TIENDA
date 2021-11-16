@@ -33,7 +33,7 @@ namespace Win.Tienda
             ListacategoriaBindingSource.DataSource = _categorias.ObtenerCategorias();
 
             _tipos = new TipoBL();
-            ListatipoBindingSource.DataSource = _tipos.Obtenertipos();
+            listatipoBindingSource.DataSource = _tipos.Obtenertipos();
 
         }
 
@@ -57,7 +57,7 @@ namespace Win.Tienda
             {
                 listaProductosBindingSource.ResetBindings(false);
                 DesahabilitarHabilitarBotones(true);
-                MessageBox.Show("Producto guardado");
+                MessageBox.Show("Producto guardado.");
             }
             else
             {
@@ -154,7 +154,7 @@ namespace Win.Tienda
 
         private void button2_Click(object sender, EventArgs e)
         {
-            fotoPictureBox = null;
+            fotoPictureBox.Image = null;
         }
 
         private void fotoPictureBox_Click(object sender, EventArgs e)

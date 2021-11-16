@@ -15,7 +15,6 @@ namespace BL.Tienda
             _contexto = new Contexto();      //*Instanciamos la variable contexto*//
             ListaCategorias = new BindingList<Categoria>();
 
-            //* Datos de prueba fueron eliminados*//
         }
 
         public BindingList<Categoria> ObtenerCategorias()

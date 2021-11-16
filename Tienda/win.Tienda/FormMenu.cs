@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Win.Rentas;
 
 namespace Win.Tienda
 {
@@ -53,6 +54,20 @@ namespace Win.Tienda
             var formFactura = new FormFactura();
             formFactura.MdiParent = this;
             formFactura.Show();
+        }
+
+        private void reporteDeProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formReporteProductos = new FormReporteProductos();
+            formReporteProductos.MdiParent = this;
+            formReporteProductos.Show();
+        }
+
+        private void reporteDeFacturasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formReporteFacturas = new formReporteFacturas();
+            formReporteFacturas.MdiParent = this;
+            formReporteFacturas.Show();
         }
     }
 }

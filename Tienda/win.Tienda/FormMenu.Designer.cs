@@ -34,6 +34,7 @@ namespace Win.Tienda
             this.tiendaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.articulosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.facturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transaccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevaVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,9 +43,9 @@ namespace Win.Tienda
             this.reporteDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesDeClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesDeVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteDeFacturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.seguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.facturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,16 +76,23 @@ namespace Win.Tienda
             // articulosToolStripMenuItem
             // 
             this.articulosToolStripMenuItem.Name = "articulosToolStripMenuItem";
-            this.articulosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.articulosToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.articulosToolStripMenuItem.Text = "Articulos";
             this.articulosToolStripMenuItem.Click += new System.EventHandler(this.articulosToolStripMenuItem_Click);
             // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
+            // 
+            // facturaToolStripMenuItem
+            // 
+            this.facturaToolStripMenuItem.Name = "facturaToolStripMenuItem";
+            this.facturaToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.facturaToolStripMenuItem.Text = "Factura";
+            this.facturaToolStripMenuItem.Click += new System.EventHandler(this.facturaToolStripMenuItem_Click);
             // 
             // transaccionesToolStripMenuItem
             // 
@@ -116,10 +124,13 @@ namespace Win.Tienda
             // 
             // reportesToolStripMenuItem
             // 
+            this.reportesToolStripMenuItem.Checked = true;
+            this.reportesToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.reporteDeProductosToolStripMenuItem,
             this.reportesDeClientesToolStripMenuItem,
-            this.reportesDeVentasToolStripMenuItem});
+            this.reportesDeVentasToolStripMenuItem,
+            this.reporteDeFacturasToolStripMenuItem});
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.reportesToolStripMenuItem.Text = "Reportes";
@@ -129,6 +140,7 @@ namespace Win.Tienda
             this.reporteDeProductosToolStripMenuItem.Name = "reporteDeProductosToolStripMenuItem";
             this.reporteDeProductosToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.reporteDeProductosToolStripMenuItem.Text = "Reporte de Productos";
+            this.reporteDeProductosToolStripMenuItem.Click += new System.EventHandler(this.reporteDeProductosToolStripMenuItem_Click);
             // 
             // reportesDeClientesToolStripMenuItem
             // 
@@ -141,6 +153,13 @@ namespace Win.Tienda
             this.reportesDeVentasToolStripMenuItem.Name = "reportesDeVentasToolStripMenuItem";
             this.reportesDeVentasToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.reportesDeVentasToolStripMenuItem.Text = "Reportes de Ventas";
+            // 
+            // reporteDeFacturasToolStripMenuItem
+            // 
+            this.reporteDeFacturasToolStripMenuItem.Name = "reporteDeFacturasToolStripMenuItem";
+            this.reporteDeFacturasToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.reporteDeFacturasToolStripMenuItem.Text = "Reporte de Facturas";
+            this.reporteDeFacturasToolStripMenuItem.Click += new System.EventHandler(this.reporteDeFacturasToolStripMenuItem_Click);
             // 
             // seguridadToolStripMenuItem
             // 
@@ -156,13 +175,6 @@ namespace Win.Tienda
             this.loginToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.loginToolStripMenuItem.Text = "Login";
             this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
-            // 
-            // facturaToolStripMenuItem
-            // 
-            this.facturaToolStripMenuItem.Name = "facturaToolStripMenuItem";
-            this.facturaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.facturaToolStripMenuItem.Text = "Factura";
-            this.facturaToolStripMenuItem.Click += new System.EventHandler(this.facturaToolStripMenuItem_Click);
             // 
             // FormMenu
             // 
@@ -202,5 +214,6 @@ namespace Win.Tienda
         private System.Windows.Forms.ToolStripMenuItem seguridadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem facturaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reporteDeFacturasToolStripMenuItem;
     }
 }

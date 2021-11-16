@@ -36,6 +36,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine">
+      <HintPath>..\..\..\..\..\..\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource">
+      <HintPath>..\..\..\..\..\..\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared">
+      <HintPath>..\..\..\..\..\..\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms">
+      <HintPath>..\..\..\..\..\..\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -44,6 +56,7 @@
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
       <Private>True</Private>
@@ -55,6 +68,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -66,6 +81,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FormClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +122,18 @@
     <Compile Include="FormProductos.Designer.cs">
       <DependentUpon>FormProductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="formReporteFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formReporteFacturas.Designer.cs">
+      <DependentUpon>formReporteFacturas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReporteProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReporteProductos.Designer.cs">
+      <DependentUpon>FormReporteProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormVentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +142,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReporteFacturas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteFacturas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReporteProductos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteProductos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="FormClientes.resx">
       <DependentUpon>FormClientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,6 +172,12 @@
     <EmbeddedResource Include="FormProductos.resx">
       <DependentUpon>FormProductos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formReporteFacturas.resx">
+      <DependentUpon>formReporteFacturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReporteProductos.resx">
+      <DependentUpon>FormReporteProductos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormVentas.resx">
       <DependentUpon>FormVentas.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,6 +191,25 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ReporteFacturas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteFacturas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteProductos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteProductos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="DataSet.xsc">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet.xss">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\BL.Tienda.Categoria.datasource" />
     <None Include="Properties\DataSources\BL.Tienda.CategoriaBL.datasource" />
@@ -148,9 +217,9 @@
     <None Include="Properties\DataSources\BL.Tienda.ClienteBL.datasource" />
     <None Include="Properties\DataSources\BL.Tienda.Contexto.datasource" />
     <None Include="Properties\DataSources\BL.Tienda.FacturaBL.datasource" />
+    <None Include="Properties\DataSources\BL.Tienda.FacturaDetalle.datasource" />
     <None Include="Properties\DataSources\BL.Tienda.Producto.datasource" />
     <None Include="Properties\DataSources\BL.Tienda.ProductosBL.datasource" />
-    <None Include="Properties\DataSources\BL.Tienda.Resutado.datasource" />
     <None Include="Properties\DataSources\BL.Tienda.SeguridadBL.datasource" />
     <None Include="Properties\DataSources\BL.Tienda.Tipo.datasource" />
     <None Include="Properties\DataSources\BL.Tienda.TipoBL.datasource" />
@@ -178,6 +247,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\WhatsApp Image 2021-11-04 at 10.38.44 PM1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

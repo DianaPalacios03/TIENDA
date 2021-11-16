@@ -19,7 +19,7 @@ namespace BL.Tienda
 
         public BindingList<Producto> ObtenerProductos()
         {
-            _contexto.Categorias.Load();           //* Carga los productos*//
+            _contexto.Productos.Load();           //* Carga los productos*//
             ListaProductos = _contexto.Productos.Local.ToBindingList();   //*LLenamos la lista de productos*//
 
             return ListaProductos;
