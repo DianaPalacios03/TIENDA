@@ -176,6 +176,27 @@ namespace Win.Tienda
         {
 
         }
-    }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string buscar = textBox1.Text;
+
+            if (buscar != "")
+            {
+                listaProductosBindingSource.DataSource = _productos.ObtenerProductos(buscar);
+            }
+            else
+            {
+                listaProductosBindingSource.DataSource = _productos.ObtenerProductos();
+
+            }
+            listaProductosBindingSource.ResetBindings(false);
+        }
+
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

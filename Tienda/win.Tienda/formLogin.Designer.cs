@@ -58,6 +58,7 @@ namespace Win.Tienda
             this.textBox1.Size = new System.Drawing.Size(125, 24);
             this.textBox1.TabIndex = 1;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // textBox2
             // 
@@ -67,6 +68,7 @@ namespace Win.Tienda
             this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(125, 24);
             this.textBox2.TabIndex = 3;
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // label2
             // 
@@ -107,7 +109,7 @@ namespace Win.Tienda
             this.pictureBox1.Location = new System.Drawing.Point(98, 39);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(135, 152);
+            this.pictureBox1.Size = new System.Drawing.Size(135, 126);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
@@ -116,7 +118,7 @@ namespace Win.Tienda
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(330, 411);
+            this.ClientSize = new System.Drawing.Size(351, 411);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);

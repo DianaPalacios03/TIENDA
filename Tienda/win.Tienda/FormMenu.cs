@@ -27,6 +27,8 @@ namespace Win.Tienda
         {
             var formLogin = new FormLogin();
             formLogin.ShowDialog();//Showdialog es para que el formulario login se quede estatico
+
+            toolStripStatusLabel1.Text = "Usuario:" + Utilidades.NombreUsuario;
         }
 
        

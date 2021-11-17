@@ -1,17 +1,18 @@
 ﻿using System.ComponentModel;
 using System.Data.Entity;
+using System.Linq;
 
 namespace BL.Tienda
 {
-    public class ProductosBL  //* Creacion de la clase Producto*//
+    public class ProductosBL  // Creacion de la clase Producto//
     {
-        Contexto _contexto;   //*Declarar la variable de tipo contexto*//
-       public BindingList<Producto> ListaProductos { get; set; }  //*Permite realizar una lista de productos*//
+        Contexto _contexto;   //Declarar la variable de tipo contexto//
+       public BindingList<Producto> ListaProductos { get; set; }  //Permite realizar una lista de productos//
 
 
         public ProductosBL()
         {
-            _contexto = new Contexto();      //*Instanciamos la variable contexto*//
+            _contexto = new Contexto();      //Instanciamos la variable contexto//
             ListaProductos = new BindingList<Producto>();
 
             //* Datos de prueba fueron eliminados*//
@@ -19,10 +20,17 @@ namespace BL.Tienda
 
         public BindingList<Producto> ObtenerProductos()
         {
-            _contexto.Productos.Load();           //* Carga los productos*//
-            ListaProductos = _contexto.Productos.Local.ToBindingList();   //*LLenamos la lista de productos*//
+            _contexto.Productos.Load();           // Carga los productos//
+            ListaProductos = _contexto.Productos.Local.ToBindingList();   //LLenamos la lista de productos//
 
             return ListaProductos;
+        }
+        public BindingList<Producto> ObtenerProductos(string buscar) // parametro//
+        {
+
+            var resultado = _contexto.Productos.Where(r => r.Descripcion.Contains(buscar));
+
+            return new BindingList<Producto>(resultado.ToList());
         }
 
         /*Creacion de metodo para el boton cancelar del formulario*/
